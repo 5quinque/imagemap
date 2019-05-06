@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create HTML image maps">
+  <meta name="google-site-verification" content="VDrgrKKlpRw2rHj72H-GaXwB9NzBug1Ssmd-2nHsTC8" />
+  <title>Image Map Generator</title>
+  <link rel="shortcut icon" href="img/imgmap-x-small.png" />
+  <link rel="stylesheet" href="css/map.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css" />
+  <link rel="stylesheet" href="css/svg.select.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+</head>
+<body>
+<div id="drag_box"><i class="far fa-file-image fa-10x"></i></div>
+<div class="header">
+  <div class="home-menu pure-menu pure-menu-horizontal">
+    <div class="helper"><img class="header-img" src="img/imgmap-x-small.png"></div>
+  </div>
+</div>
+<div class="splash-container" id="drop_file">
+  <div class="splash">
+    <p class="splash-subhead">
+      Create HTML image maps. Choose an image from your computer and highlight areas to create the HTML required for your image.
+    </p>
+    <p>
+      <input type="file" id="file" name="file">
+      <label class="pure-button pure-button-primary" for="file">Select Image</label>
+    </p>
+  </div>
+</div>
+<div class="content-wrapper">
+  <div id="mapped_content">
+    <div class="content pure-g">
+      <div class="pure-u-1-5"></div>
+      <div class="pure-u-3-5">
+        <p>
+          <button class="pure-button pure-button-primary pure-button-active" id="draw_rect">
+            <i class="far fa-square"></i>
+          </button>
+          <button class="pure-button pure-button-primary" id="draw_circle">
+            <i class="far fa-circle"></i>
+          </button>
+          <button class="pure-button pure-button-primary" id="draw_poly">
+            <i class="fas fa-draw-polygon"></i>
+          </button>
+          <button class="pure-button button-delete" id="delete">
+            <i class="fas fa-trash"></i>
+          </button>
+        </p>
+      </div>
+    </div>
+    <div class="content pure-g">
+      <div class="pure-u-3-5" style="position: relative">
+        <div id="graph" class="graph"></div>
+        <img class="pure-img" id="mapped_image" src="">
+      </div>
+      <div class="pure-u-2-5">
+        <form class="pure-form pure-form-stacked" id="form_href">
+        </form>
+      </div>
+    </div>
+    <div class="content">
+      <div class="pure-u-1-5"></div>
+      <div class="pure-u-3-5">
+        <h3 class="content-subhead">
+          Generated HTML Output
+        </h3>
+        <p>
+        <form class="pure-form">
+        <textarea id="ta_html" class="pure-input-1" placeholder="HTML will appear here!" rows="14"></textarea>
+        </form>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="pure-g">
+      <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+        <h3 class="content-subhead">
+          Definition and usage
+        </h3>
+        <p>
+        The &lt;map&gt; tag is used to define a client-side image-map. An image-map is an image with clickable areas. The required name attribute of the &lt;map&gt; element is associated with the &lt;img&gt;'s usemap attribute and creates a relationship between the image and the map. The &lt;map&gt; element contains a number of &lt;area&gt; elements, that defines the clickable areas in the image map.
+        </p>
+        </div>
+        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+          <h3 class="content-subhead">
+            About
+          </h3>
+          <p>
+            This tool makes it extremely easy to generate HTML based image maps. All work is done in the browser, so your image is never sent to a server.
+          </p>
+        </div>
+        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+          <h3 class="content-subhead">
+          </h3>
+          <p>
+          </p>
+        </div>
+        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+          <h3 class="content-subhead">
+          </h3>
+          <p>
+          </p>
+        </div>
+    </div>
+  </div>
+  <div class="footer l-box is-center">
+    &copy; imagemap.org 2019
+  </div>
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.6/svg.min.js" integrity="sha256-M8IkAPnXdVChgPQwts/KeepRP4ogs+hzBtPmVhUj5YA=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.connectable.js/2.0.1/svg.connectable.min.js"></script>
+<script type="text/javascript" src="js/svg.draggable.min.js"></script>
+<script type="text/javascript" src="js/svg.draw.min.js"></script>
+<script type="text/javascript" src="js/svg.select.min.js"></script>
+<script type="text/javascript" src="js/svg.resize.min.js"></script>
+<script type="text/javascript" src="js/map.min.js"></script>
+</html>
